@@ -19,7 +19,20 @@ const theme = {
   },
   styles: {
     ...funk.styles
-  }
+  },
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'text',
+      }
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
 }
 
 export default theme
