@@ -2,10 +2,10 @@ import nc from 'next-connect';
 import notes from '../../../src/data/data'
 
 const getNote = id => notes.find(n => n.id === parseInt(id))
-const note = getNote(req.query.id);
 
 const handler = nc()
   .get((req, res) => {
+    const note = getNote(req.query.id);
     if (!note) {
       res.status(404);
       res.end();
@@ -15,6 +15,7 @@ const handler = nc()
   })
 
   .patch((req, res) => {
+    const note = getNote(req.query.id);
     if (!note) {
       res.status(404);
       res.end();
